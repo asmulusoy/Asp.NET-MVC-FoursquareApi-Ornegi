@@ -1,0 +1,31 @@
+﻿@model List<FoursquareYakinKahve.Models.KahveDukkani>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAnasayfa.cshtml";
+}
+
+<div class="container" style="margin-top:15px;">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div style="width:350px;" class=" col-md-2 ">
+                <div class="card card-inverse ">
+                    <img class="card-img-top" src="~/pic/logo.png">
+                    <div class="card-block">
+                        <h5 class="text-bold">@item.name</h5>
+                        <p class="text-uppercase">@item.id</p>
+                        <p class="navbar-text">@item.lat , @item.lng</p>
+                        <p class="navbar-text">@item.photoUrl</p>
+                        <p class="navbar-text">@item.address</p>
+                        <p class="navbar-text">@item.Telefon</p>
+                        <p class="navbar-text">@item.url</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    @ViewBag.deneme;
+</div>
+
+
+
